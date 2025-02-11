@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  proxy-set-headers: "ingress-nginx/custom-headers"
+  default-type: "application/json"
+kind: ConfigMap
+metadata:
+  name: nanumsa-ingress-ingress-nginx-controller
+  labels:
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
