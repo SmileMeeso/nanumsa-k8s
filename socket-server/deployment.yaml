@@ -14,7 +14,7 @@ spec:
         spec:
             containers:
                 - name: nanumsa-socket-server
-                  image: nanumsa-socket-server:latest
+                  image: smilemeeso/nanumsa-socket-server:latest
                   imagePullPolicy: Never
                   ports:
                       - containerPort: 3030
