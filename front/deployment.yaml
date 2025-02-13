@@ -14,7 +14,7 @@ spec:
         spec:
             containers:
                 - name: nanumsa-front
-                  image: nanumsa-front:latest
+                  image: smilemeeso/nanumsa-fe:latest
                   imagePullPolicy: Never
                   ports:
                       - containerPort: 80

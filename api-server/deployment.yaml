@@ -15,7 +15,7 @@ spec:
             hostNetwork: true
             containers:
                 - name: nanumsa-api-server
-                  image: nanumsa-api-server:latest
+                  image: smilemeeso/nanumsa-api-server:latest
                   imagePullPolicy: Never
                   ports:
                       - containerPort: 8080
