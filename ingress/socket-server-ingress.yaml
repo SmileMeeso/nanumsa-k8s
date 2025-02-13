@@ -25,10 +25,3 @@ spec:
             name: nanumsa-socket-server
             port:
               number: 3000
-      - path: /socket.io/
-        pathType: Prefix
-        backend:
-          service:
-            name: nanumsa-socket-server
-            port:
-              number: 3000
