@@ -37,5 +37,4 @@ spec:
                       - name: NANUMSA_SERVER_FIREBASE_ADMIN_CREDENTIAL_FILE_PATH
                         valueFrom:
                             secretKeyRef:
-                                name: firebase-auth
                                 key: nanumsa-server-firebase-admin-credential-file-path
