@@ -16,7 +16,6 @@ spec:
             containers:
                 - name: nanumsa-api-server
                   image: smilemeeso/nanumsa-api-server:latest
-                  imagePullPolicy: Never
                   ports:
                       - containerPort: 8080
                   env:
