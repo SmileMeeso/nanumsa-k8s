@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
- name: nginx-ingress-nlb
+ name: nginx-ingress-alb
  namespace: default
  annotations:
    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "tcp"
