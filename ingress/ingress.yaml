@@ -16,7 +16,7 @@ spec:
   ingressClassName: nginx
   tls: 
   - hosts: 
-    - nanumsa.com
+    - www.nanumsa.com
     secretName: tls-secret
   rules:
   - http:
