@@ -7,8 +7,8 @@ spec:
     server: https://acme-v02.api.letsencrypt.org/directory
     email: m950827@naver.com
     privateKeySecretRef:
-      name: letsencrypt-nginx
+      name: letsencrypt-staging
     solvers:
-      - http01:
-          ingress:
-            class: nginx
+    - http01:
+        ingress:
+          class:  nginx

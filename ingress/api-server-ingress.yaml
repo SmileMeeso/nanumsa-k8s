@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: nanumsa-api-ingress
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod
     acme.cert-manager.io/http01-edit-in-place: "true"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
     kubernetes.io/tls-acme: "true"
