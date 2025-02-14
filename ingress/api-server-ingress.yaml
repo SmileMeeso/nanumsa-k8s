@@ -3,12 +3,19 @@ kind: Ingress
 metadata:
   name: nanumsa-api-ingress
   annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-nginx
+    acme.cert-manager.io/http01-edit-in-place: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    kubernetes.io/tls-acme: "true"
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
   ingressClassName: nginx
+  tls: 
+  - hosts: 
+    - nanumsa.com
+    secretName: tls-secret
   rules:
-  - host: nanumsa.com
   - http:
       paths:
       - path: /api/(.*)
