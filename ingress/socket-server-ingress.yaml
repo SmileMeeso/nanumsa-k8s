@@ -3,10 +3,8 @@ kind: Ingress
 metadata:
   name: nanumsa-socket-server-ingress
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-nginx
-    acme.cert-manager.io/http01-edit-in-place: "true"
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-    kubernetes.io/tls-acme: "true"
+    cert-manager.io/issuer: "letsencrypt-production"
+    cert-manager.io/acme-challenge-issuer: "letsencrypt-production"
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/proxy-set-headers: '{"X-Forwarded-Proto": "ws"}'
     nginx.ingress.kubernetes.io/websocket-services: "nanumsa-socket-server"
@@ -22,7 +20,7 @@ spec:
   tls: 
   - hosts: 
     - nanumsa.com
-    secretName: letsencrypt-prod
+    secretName: tls-secret
   rules:
   - http:
       paths:

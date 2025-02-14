@@ -3,10 +3,8 @@ kind: Ingress
 metadata:
   name: nanumsa-ingress
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-nginx
-    acme.cert-manager.io/http01-edit-in-place: "true"
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-    kubernetes.io/tls-acme: "true"
+    cert-manager.io/issuer: "letsencrypt-production"
+    cert-manager.io/acme-challenge-issuer: "letsencrypt-production"
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/cors-allow-origin: "*"
@@ -19,7 +17,7 @@ spec:
   tls: 
   - hosts: 
     - nanumsa.com
-    secretName: letsencrypt-prod
+    secretName: tls-secret
   rules:
   - http:
       paths:
