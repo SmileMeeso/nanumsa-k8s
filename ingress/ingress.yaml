@@ -13,6 +13,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
+  - host: nanumsa.com
   - http:
       paths:
       - path: /
