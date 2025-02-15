@@ -19,7 +19,8 @@ spec:
     - www.nanumsa.com
     secretName: tls-secret
   rules:
-  - http:
+  - host: www.nanumsa.com
+    http:
       paths:
       - path: /
         pathType: Prefix

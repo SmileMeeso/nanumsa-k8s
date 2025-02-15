@@ -22,7 +22,8 @@ spec:
     - www.nanumsa.com
     secretName: tls-secret-socket-server
   rules:
-  - http:
+  - host: www.nanumsa.com
+    http:
       paths:
       - path: /socket
         pathType: Prefix
