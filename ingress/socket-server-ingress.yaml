@@ -20,7 +20,7 @@ spec:
   tls: 
   - hosts: 
     - www.nanumsa.com
-    secretName: tls-secret
+    secretName: tls-secret-socket-server
   rules:
   - http:
       paths:

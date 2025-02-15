@@ -12,7 +12,7 @@ spec:
   tls: 
   - hosts: 
     - www.nanumsa.com
-    secretName: tls-secret
+    secretName: tls-secret-api-server
   rules:
   - http:
       paths:
