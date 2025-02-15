@@ -12,7 +12,6 @@ spec:
             labels:
                 app: nanumsa-api-server
         spec:
-            hostNetwork: true
             containers:
                 - name: nanumsa-api-server
                   image: smilemeeso/nanumsa-api-server:latest
