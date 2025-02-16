@@ -14,9 +14,10 @@ metadata:
     nginx.ingress.kubernetes.io/cors-allow-methods: GET, POST, DELETE, PATCH, PUT, OPTIONS
     # ws 설정용
     nginx.org/websocket-services: nanumsa-socket-server
-    nginx.ingress.kubernetes.io/upstream-hash-by: "$arg_token"
-    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
-    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.org/proxy-read-timeout: '3600'
+    nginx.org/proxy-send-timeout: "3600"
+    enable-underscores-in-headers: 'true'
+    # 여기까지
     nginx.ingress.kubernetes.io/configuration-snippet: |
       proxy_set_header X-Real-IP $remote_addr;
       proxy_pass_header Content-Type;
