@@ -11,6 +11,7 @@ metadata:
     nginx.ingress.kubernetes.io/upgrade: "websocket"
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
     nginx.ingress.kubernetes.io/cors-allow-methods: GET, POST, DELETE, PATCH, PUT, OPTIONS
     nginx.ingress.kubernetes.io/configuration-snippet: |
       proxy_set_header X-Real-IP $remote_addr;
@@ -25,8 +26,8 @@ spec:
   - host: www.nanumsa.com
     http:
       paths:
-      - path: /socket
-        pathType: Prefix
+      - path: /socket/(.*)
+        pathType: ImplementationSpecific
         backend:
           service:
             name: nanumsa-socket-server
