@@ -14,10 +14,8 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-http-version: "1.0"
     nginx.ingress.kubernetes.io/cors-allow-methods: GET, POST, DELETE, PATCH, PUT, OPTIONS
     nginx.ingress.kubernetes.io/configuration-snippet: |
-      proxy_pass wss://www.nanumsa.com:3000;
-
-      proxy_set_header X-Real-IP $remote_addr;
       proxy_pass_header Content-Type;
+      proxy_set_header X-Real-IP $remote_addr;
       proxy_set_header Upgrade $http_upgrade;
       proxy_set_header Connection "upgrade";
       proxy_set_header Host $host;
