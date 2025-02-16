@@ -1,12 +1,13 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nanumsa-api-ingress
+  name: nanumsa-api-server-ingress
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
     cert-manager.io/acme-challenge-issuer: "letsencrypt-production"
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.org/websocket-services: "ws-svc"
 spec:
   ingressClassName: nginx
   tls: 
