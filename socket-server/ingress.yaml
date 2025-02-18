@@ -19,8 +19,10 @@ metadata:
     nginx.ingress.kubernetes.io/configuration-snippet: |
       proxy_pass_header Content-Type;
       proxy_set_header Host $host;
-      proxy_set_header Upgrade $http_upgrade;
-      proxy_set_header Connection "upgrade";
+
+      location /socket.io/ {
+        nginx.ingress.kubernetes.io/proxy-pass: https://www.nanumsa.com/socket.io/
+      }
 spec:
   ingressClassName: nginx
   tls: 
