@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: postgresql-svc
 spec:
-  clusterIP: None
+  type: ClusterIP
   ports:
     - name: postgresql
       port: 5432
