@@ -4,7 +4,7 @@ metadata:
   name: postgresql-svc
 subsets:
 - addresses:
-  - ip: 172.31.3.54
+  - ip: 3.36.114.214
   ports:
   - name: postgresql
     port: 5432
