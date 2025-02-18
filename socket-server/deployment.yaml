@@ -16,4 +16,4 @@ spec:
                 - name: nanumsa-socket-server
                   image: smilemeeso/nanumsa-socket-server:latest
                   ports:
-                      - containerPort: 3030
+                      - containerPort: 3000
