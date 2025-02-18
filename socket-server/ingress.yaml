@@ -12,9 +12,9 @@ metadata:
     # ws config
     nginx.ingress.kubernetes.io/websocket-services: nanumsa-socket-server
     nginx.org/websocket-services: nanumsa-socket-server
-    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
-    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
-    nginx.ingress.kubernetes.io/proxy-connect-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: 300s
+    nginx.ingress.kubernetes.io/proxy-read-timeout: 300s
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: 300s
     nginx.ingress.kubernetes.io/proxy-body-size: 20m
     # ws config end
     nginx.ingress.kubernetes.io/configuration-snippet: |
