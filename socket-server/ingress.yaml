@@ -40,7 +40,7 @@ spec:
               name: nanumsa-socket-server-service
               port:
                 number: 3000
-        - path: /socket\.io/
+        - path: /socket.io
           pathType: Prefix
           backend:
             service:
