@@ -20,7 +20,7 @@ metadata:
       proxy_pass_header Content-Type;
       proxy_set_header Host $host;
 
-      location /socket.io/ {
+      location /socket.io/(.*) {
         nginx.ingress.kubernetes.io/proxy-pass: https://www.nanumsa.com/socket.io/
       }
 spec:
