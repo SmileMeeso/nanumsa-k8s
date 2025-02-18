@@ -9,8 +9,7 @@ metadata:
     
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/rewrite-target: /$1
-    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    # nginx.ingress.kubernetes.io/client-body-buffer-size: 1m
     # ws config
     nginx.ingress.kubernetes.io/websocket-services: nanumsa-socket-server
     nginx.org/websocket-services: nanumsa-socket-server
