@@ -16,6 +16,12 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-read-timeout: 60ss
     nginx.ingress.kubernetes.io/proxy-connect-timeout: 5s
     nginx.ingress.kubernetes.io/proxy-body-size: 20m
+    nginx.ingress.kubernetes.io/proxy-buffers-number: "8"
+    nginx.ingress.kubernetes.io/proxy-buffer-size: "64k"
+    nginx.ingress.kubernetes.io/proxy-busy-buffers-size: "64k"
+    nginx.ingress.kubernetes.io/keep-alive: "on"
+    nginx.ingress.kubernetes.io/keep-alive-timeout: "75s"
+    nginx.ingress.kubernetes.io/keep-alive-requests: "100"
     # ws config end
     nginx.ingress.kubernetes.io/configuration-snippet: |
       proxy_pass_header Content-Type;
@@ -31,13 +37,6 @@ spec:
     http:
       paths:
         - path: /socket/(.*)
-          pathType: ImplementationSpecific
-          backend:
-            service:
-              name: nanumsa-socket-server-service
-              port:
-                number: 3000
-        - path: /socket.io/(.*)
           pathType: ImplementationSpecific
           backend:
             service:
