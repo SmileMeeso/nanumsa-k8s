@@ -19,12 +19,13 @@ spec:
     - www.nanumsa.com
     secretName: tls-secret
   rules:
-    - http:
-        paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: nanumsa-front
-              port:
-                number: 80
+  - host: www.nanumsa.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nanumsa-front
+            port:
+              number: 80
