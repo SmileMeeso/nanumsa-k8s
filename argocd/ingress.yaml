@@ -20,7 +20,8 @@ spec:
     - www.nanumsa.com
     secretName: tls-secret-argocd
   rules:
-    - http:
+    - host: www.nanumsa.com
+      http:
         paths:
         - path: /argocd
           pathType: Prefix
@@ -28,4 +29,4 @@ spec:
             service:
               name: argocd-server
               port:
-                name: https
+                number: 443
