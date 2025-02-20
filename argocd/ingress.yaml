@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nanumsa-ingress-argocd
+  namespace: argocd
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-production"
+    cert-manager.io/acme-challenge-issuer: "letsencrypt-production"
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/cors-allow-methods: GET, POST, DELETE, PATCH, PUT, OPTIONS
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/server-snippet: |
+      return 301 $scheme://argocd.nanumsa.com:3080$request_uri;
+spec:
+  ingressClassName: nginx
+  tls: 
+  - hosts: 
+    - argocd.nanumsa.com
+    secretName: tls-secret-argocd
+  rules:
+  - host: argocd.nanumsa.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: argocd-server
+            port:
+              number: 3080
+              # name: https
