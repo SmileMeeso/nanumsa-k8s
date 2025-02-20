@@ -12,8 +12,6 @@ metadata:
     nginx.ingress.kubernetes.io/cors-allow-methods: GET, POST, DELETE, PATCH, PUT, OPTIONS
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
-    # nginx.ingress.kubernetes.io/server-snippet: |
-    #   return 301 $scheme://argocd.nanumsa.com:3080$request_uri;
 spec:
   ingressClassName: nginx
   tls: 
@@ -21,7 +19,7 @@ spec:
     - www.nanumsa.com
     secretName: tls-secret-argocd
   rules:
-  - host: www.nanumsa.com.nanumsa.com
+  - host: www.nanumsa.com
     http:
       paths:
       - path: /argocd
@@ -30,5 +28,4 @@ spec:
           service:
             name: argocd-server
             port:
-              number: 3080
-              # name: https
+              name: https
