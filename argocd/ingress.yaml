@@ -7,6 +7,7 @@ metadata:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
     cert-manager.io/acme-challenge-issuer: "letsencrypt-production"
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/cors-allow-origin: "*"
