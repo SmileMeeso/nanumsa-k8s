@@ -15,12 +15,13 @@ metadata:
     nginx.ingress.kubernetes.io/cors-allow-methods: GET, POST, DELETE, PATCH, PUT, OPTIONS
 spec:
   ingressClassName: nginx
-  # tls: 
-  # - hosts: 
-  #   - www.nanumsa.com
-  #   secretName: argocd-server-tls
+  tls: 
+  - hosts: 
+    - www.nanumsa.com
+    secretName: argocd-server-tls
   rules:
-    - http:
+    - host: www.nanumsa.com
+      http:
         paths:
         - path: /argocd
           pathType: Prefix
