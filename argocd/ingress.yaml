@@ -18,14 +18,3 @@ spec:
   - hosts: 
     - www.nanumsa.com
     secretName: tls-secret-argocd
-  rules:
-  - host: www.nanumsa.com
-    http:
-      paths:
-      - path: /argocd
-        pathType: Prefix
-        backend:
-          service:
-            name: argocd-server
-            port:
-              name: https
