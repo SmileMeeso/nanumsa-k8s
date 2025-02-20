@@ -26,7 +26,6 @@ metadata:
     nginx.ingress.kubernetes.io/configuration-snippet: |
       proxy_pass_header Content-Type;
       proxy_set_header Host $host;
-      proxy_set_header X-Forwarded-Host $host;
 spec:
   ingressClassName: nginx
   tls: 
