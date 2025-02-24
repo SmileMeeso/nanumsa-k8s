@@ -5,5 +5,5 @@ resources:
   - service.yaml
   - ingress.yaml
 images:
-  - name: smilemeeso/nanumsa-front
+  - name: ""
     newTag: "0.0.0"
