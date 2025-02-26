@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"config":"address-pools:\n- name: default\n  protocol: layer2\n  addresses:\n  - 172.31.3.1-172.31.3.200\n"},"kind":"ConfigMap","metadata":{"annotations":{},"creationTimestamp":"2025-02-14T05:11:52Z","name":"config","namespace":"metallb-system","resourceVersion":"113554","uid":"45478d9c-1782-486f-9cad-b249443a7204"}}
+  creationTimestamp: "2025-02-14T05:11:52Z"
+  name: config
+  namespace: metallb-system
+  resourceVersion: "114594"
+  uid: 45478d9c-1782-486f-9cad-b249443a7204
