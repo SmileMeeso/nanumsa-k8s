@@ -1,21 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: nanumsa-front
-    annotations:
-      version: "0.0.0"
+  annotations:
+    version: 0.0.1
+  labels:
+    app: nanumsa-front
+  name: nanumsa-front
+  namespace: default
 spec:
-    replicas: 1
-    selector:
-        matchLabels:
-            app: nanumsa-front
-    template:
-        metadata:
-            labels:
-                app: nanumsa-front
-        spec:
-            containers:
-                - name: nanumsa-front
-                  image: smilemeeso/nanumsa-fe:latest
-                  ports:
-                      - containerPort: 80
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nanumsa-front
+  template:
+    metadata:
+      annotations:
+        version: 0.0.1
+      labels:
+        app: nanumsa-front
+    spec:
+      containers:
+        - image: smilemeeso/nanumsa-fe:latest
+          name: nanumsa-front
+          ports:
+            - containerPort: 80
