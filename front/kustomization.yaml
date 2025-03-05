@@ -8,7 +8,7 @@ commonLabels:
 images:
 - name: smilemeeso/
   newTag: 0.1.0
-- name: smilemeeso/nanumsa-fe
+- name: smilemeeso/nanumsa-front
 
 resources:
 - ./deployment.yaml
