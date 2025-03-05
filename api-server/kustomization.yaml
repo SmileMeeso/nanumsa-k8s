@@ -3,7 +3,7 @@ kind: Kustomization
 
 namespace: default
 commonLabels:
-  app: nanumsa-api-service
+  app: nanumsa-api-server
 
 images:
 - name: smilemeeso/
