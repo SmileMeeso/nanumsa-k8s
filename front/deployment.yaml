@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    version: 0.1.0
+    version: 0.1.30
   labels:
     app: nanumsa-front
   name: nanumsa-front
@@ -18,7 +18,7 @@ spec:
         app: nanumsa-front
     spec:
       containers:
-        - image: smilemeeso/nanumsa-front:latest
-          name: nanumsa-front
-          ports:
-            - containerPort: 80
+      - image: smilemeeso/nanumsa-front:latest
+        name: nanumsa-front
+        ports:
+        - containerPort: 80

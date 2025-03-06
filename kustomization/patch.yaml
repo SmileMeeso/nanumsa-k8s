@@ -3,4 +3,4 @@ kind: Deployment
 metadata:
   name: nanumsa-front
   annotations:
-    version: "OVERWRITE_VERSION"
+    version: "0.1.30"
