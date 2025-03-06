@@ -1,19 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: nanumsa-socket-server
+  annotations:
+    version: 0.0.1
+  labels:
+    app: nanumsa-socket-server
+  name: nanumsa-socket-server
+  namespace: default
 spec:
-    replicas: 1
-    selector:
-        matchLabels:
-            app: nanumsa-socket-server
-    template:
-        metadata:
-            labels:
-                app: nanumsa-socket-server
-        spec:
-            containers:
-                - name: nanumsa-socket-server
-                  image: smilemeeso/nanumsa-socket-server:latest
-                  ports:
-                      - containerPort: 3000
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nanumsa-socket-server
+  template:
+    metadata:
+      annotations:
+        version: 0.0.1
+      labels:
+        app: nanumsa-socket-server
+    spec:
+      containers:
+        - image: smilemeeso/nanumsa-socket-server:latest
+          name: nanumsa-socket-server
+          ports:
+            - containerPort: 3000

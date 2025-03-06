@@ -7,7 +7,7 @@ commonLabels:
 
 images:
 - name: smilemeeso/
-  newTag: 0.1.0
+  newTag: 0.0.1
 - name: smilemeeso/nanumsa-socket-server
 
 resources:
@@ -15,4 +15,4 @@ resources:
 - ./service.yaml
 - ./ingress.yaml
 commonAnnotations:
-  version: 0.1.0
+  version: 0.0.1
