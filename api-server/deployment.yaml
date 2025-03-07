@@ -16,28 +16,24 @@ spec:
         app: nanumsa-api-server
     spec:
       containers:
-        - image: smilemeeso/nanumsa-front:0.1.33
-          name: nanumsa-front
-          ports:
-          - containerPort: 80
-        - env:
-            - name: AWS_ACCESS_KEY_ID
-              valueFrom:
-                secretKeyRef:
-                  key: aws_access_key_id
-                  name: aws-secret
-            - name: AWS_SECRET_ACCESS_KEY
-              valueFrom:
-                secretKeyRef:
-                  key: aws_secret_access_key
-                  name: aws-secret
-            - name: AWS_REGION
-              valueFrom:
-                secretKeyRef:
-                  key: aws_region
-                  name: aws-secret
-            - name: NANUMSA_SERVER_FIREBASE_ADMIN_CREDENTIAL_FILE_PATH
-              valueFrom:
-                secretKeyRef:
-                  key: nanumsa-server-firebase-admin-credential-file-path
-                  name: firebase-auth
+      - env:
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              key: aws_access_key_id
+              name: aws-secret
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              key: aws_secret_access_key
+              name: aws-secret
+        - name: AWS_REGION
+          valueFrom:
+            secretKeyRef:
+              key: aws_region
+              name: aws-secret
+        - name: NANUMSA_SERVER_FIREBASE_ADMIN_CREDENTIAL_FILE_PATH
+          valueFrom:
+            secretKeyRef:
+              key: nanumsa-server-firebase-admin-credential-file-path
+              name: firebase-auth
