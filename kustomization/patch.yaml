@@ -1,6 +1,5 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nanumsa-front
   annotations:
     version: "0.1.30"
