@@ -1,8 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    version: 0.0.1
   labels:
     app: nanumsa-api-server
   name: nanumsa-api-server
@@ -14,8 +12,6 @@ spec:
       app: nanumsa-api-server
   template:
     metadata:
-      annotations:
-        version: 0.0.1
       labels:
         app: nanumsa-api-server
     spec:
