@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    version: 0.1.30
+    version: 0.1.31
   labels:
     app: nanumsa-front
   name: nanumsa-front
