@@ -19,8 +19,8 @@ spec:
       - image: smilemeeso/nanumsa-front:0.1.33
         name: nanumsa-api-server
         ports:
-        - containerPort: 80
-      - env:
+          - containerPort: 80
+        env:
         - name: AWS_ACCESS_KEY_ID
           valueFrom:
             secretKeyRef:
