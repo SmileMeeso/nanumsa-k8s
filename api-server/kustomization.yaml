@@ -3,16 +3,10 @@ kind: Kustomization
 
 namespace: default
 commonLabels:
-  app: nanumsa-api-server
-
-images:
-- name: smilemeeso/
-  newTag: 0.0.1
-- name: smilemeeso/nanumsa-api-service
+  app: nanumsa-api-service
 
 resources:
 - ./deployment.yaml
 - ./service.yaml
 - ./ingress.yaml
-commonAnnotations:
-  version: 0.0.1
+

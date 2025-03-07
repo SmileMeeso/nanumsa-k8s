@@ -5,14 +5,8 @@ namespace: default
 commonLabels:
   app: nanumsa-socket-server
 
-images:
-- name: smilemeeso/
-  newTag: 0.0.1
-- name: smilemeeso/nanumsa-socket-server
-
 resources:
 - ./deployment.yaml
 - ./service.yaml
 - ./ingress.yaml
-commonAnnotations:
-  version: 0.0.1
+
