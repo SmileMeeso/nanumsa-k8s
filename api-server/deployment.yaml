@@ -1,10 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: nanumsa-api-server
-  name: nanumsa-api-server
-  namespace: default
+    name: nanumsa-api-server
 spec:
   replicas: 1
   selector:
