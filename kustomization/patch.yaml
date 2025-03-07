@@ -1,6 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "nanumsa-front"
-  annotations:
-    version: "0.1.31"
+  name: "OVERWRITE_NAME"
+spec:
+  template:
+    spec:
+      containers:
+        - name: "OVERWRITE_CONTAINER_NAME"
+          image: "OVERWRITE_IMAGE_NAME_WITH_TAG"
