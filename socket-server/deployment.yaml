@@ -20,7 +20,7 @@ spec:
         app: nanumsa-socket-server
     spec:
       containers:
-        - image: smilemeeso/nanumsa-socket-server:latest
-          name: nanumsa-socket-server
-          ports:
-            - containerPort: 3000
+      - image: smilemeeso/nanumsa-socket-server:0.1.34
+        name: nanumsa-socket-server
+        ports:
+        - containerPort: 3000
