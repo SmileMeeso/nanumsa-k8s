@@ -1,5 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: "OVERWRITE_NAME"
   annotations:
-    version: "0.1.30"
+    version: "OVERWRITE_VERSION"
