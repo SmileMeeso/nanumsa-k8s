@@ -16,7 +16,7 @@ spec:
         app: nanumsa-front
     spec:
       containers:
-      - image: smilemeeso/nanumsa-front:0.4.1
+      - image: smilemeeso/nanumsa-front:0.4.2
         name: nanumsa-front
         ports:
         - containerPort: 80
