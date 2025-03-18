@@ -37,7 +37,7 @@ spec:
             secretKeyRef:
               key: nanumsa-server-firebase-admin-credential-file-path
               name: firebase-auth
-        image: smilemeeso/nanumsa-api-server:0.5.1
+        image: smilemeeso/nanumsa-api-server:0.5.2
         name: nanumsa-api-server
         ports:
         - containerPort: 8080
